@@ -28,7 +28,7 @@ public class Etal {
 	public String libererEtal() {
 		etalOccupe = false;
 		StringBuilder chaine = new StringBuilder(
-				"Le vendeur " + vendeur.getNom() + " quitte son étal, ");
+				"Le vendeur " + vendeur.getNom() + " quitte son Etal, ");
 		int produitVendu = quantiteDebutMarche - quantite;
 		if (produitVendu > 0) {
 			chaine.append(
@@ -41,10 +41,10 @@ public class Etal {
 
 	public String afficherEtal() {
 		if (etalOccupe) {
-			return "L'étal de " + vendeur.getNom() + " est garni de " + quantite
+			return "L'Etal de " + vendeur.getNom() + " est garni de " + quantite
 					+ " " + produit + "\n";
 		}
-		return "L'étal est libre";
+		return "L'Etal est libre";
 	}
 
 	public String acheterProduit(int quantiteAcheter, Gaulois acheteur) {
@@ -58,7 +58,7 @@ public class Etal {
 			}
 			if (quantiteAcheter > quantite) {
 				chaine.append(", comme il n'y en a plus que " + quantite + ", "
-						+ acheteur.getNom() + " vide l'étal de "
+						+ acheteur.getNom() + " vide l'Etal de "
 						+ vendeur.getNom() + ".\n");
 				quantiteAcheter = quantite;
 				quantite = 0;
